@@ -7,13 +7,13 @@ export default function Header() {
 	return (
 		<header>
 			<h1 className='logo'>
-				<Link to='/'>DCODELAB</Link>
+				<Link to='/'>AVALLION</Link>
 			</h1>
 
 			<ul className='gnb'>
 				<li>
-					<Link to='/member' className={pathname === '/member' ? 'on' : ''}>
-						MEMBER
+					<Link to='/brandstory' className={pathname === '/brandstory' ? 'on' : ''}>
+						Brand Story
 					</Link>
 				</li>
 				<li>
