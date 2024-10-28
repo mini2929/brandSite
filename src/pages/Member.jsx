@@ -20,14 +20,12 @@ export default function BrandStory() {
 						<p>남자의 향을 완성하다</p>
 						<p>since 1990</p>
 						<p>젊은날의 성공을 함께 전달하다</p>
-						<p></p>
+						<p>AVALLION이 전달하는 Image</p>
 					</nav>
 				</div>
 
 				<div className='ceoImg'>
 					<img className='ceo' src={memberData[0].pic} alt={memberData[0].name} />
-					<h2>{memberData[0].name}</h2>
-					<p>{memberData[0].text}</p>
 				</div>
 			</article>
 
