@@ -60,8 +60,10 @@ export default function BrandStory() {
 			</section>
 
 			<section className='last'>
-				<img className='perfume' src={memberData[3].pic} alt={memberData[3].name} />
-
+				<div className='combineImg'>
+					<img className='perfume' src={memberData[3].pic} alt={memberData[3].name} />
+					<div className='bgBox'></div>
+				</div>
 				<div className='lastText'>
 					<p>완벽함의 마침표</p>
 					<p>
