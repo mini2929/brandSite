@@ -20,7 +20,7 @@ export default function BrandStory() {
 						<p>남자의 향을 완성하다</p>
 						<p>since 1990</p>
 						<p>젊은날의 성공을 함께 전달하다</p>
-						<p>AVALLION이 전달하는 Image</p>
+						<p>AVALLION의 Image</p>
 					</nav>
 				</div>
 
