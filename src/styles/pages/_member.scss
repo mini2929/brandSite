@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif+KR:wght@200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 main {
 	padding: 0vh 10vw;
-}
+	font-family: 'Noto Serif KR';
 
-main > h2 {
-	font-size: 1rem;
-	color: white;
+	> h2 {
+		font-size: 1rem;
+		color: white;
+	}
 }
 
 .ceoBox {
@@ -12,7 +15,6 @@ main > h2 {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	font-family: 'Amiri';
 	align-items: center;
 
 	.story {
@@ -25,13 +27,32 @@ main > h2 {
 			display: flex;
 			width: 100%;
 			font-weight: bold;
-			font-size: 1.5rem;
+			font-size: 1.8rem;
+			line-height: 1.9;
 			margin-bottom: 50px;
+			opacity: 0;
+			transform: translateX(-100px);
+			transition: 0s;
+
+			&.on {
+				opacity: 1;
+				transform: translateX(0px);
+				transition: 1.5s;
+			}
 		}
 		.ceoSubTitle {
 			font-weight: 200;
 			font-size: 0.8rem;
-			line-height: 2.5rem;
+			line-height: 3.8;
+			opacity: 0;
+			transform: translateX(-100px);
+			transition: 0s;
+
+			&.on {
+				opacity: 1;
+				transform: translateX(0px);
+				transition: 1.5s;
+			}
 		}
 	}
 
@@ -50,7 +71,7 @@ main > h2 {
 		&.on {
 			opacity: 1;
 			transform: translateX(0px);
-			transition: 0.5s;
+			transition: 1.5s;
 		}
 
 		.ceo {
@@ -92,7 +113,7 @@ main > h2 {
 		}
 		p:nth-child(2) {
 			font-size: 0.8rem;
-			font-weight: 200;
+			font-weight: 600;
 			color: #555;
 			border-bottom: 0.5px solid #555;
 			padding: 2px;
@@ -105,10 +126,12 @@ main > h2 {
 		line-height: 3rem;
 
 		p {
+			padding-left: 15px;
 			color: black;
 		}
 
 		p:nth-child(1) {
+			width: 500px;
 			font-weight: 500;
 			word-break: keep-all; /* 단어 단위로 줄바꿈 유지 */
 		}
@@ -165,6 +188,7 @@ main > h2 {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+
 	.combineImg {
 		width: 300px;
 		height: 300px;
@@ -199,13 +223,12 @@ main > h2 {
 		p {
 			width: 100%;
 			color: black;
-			margin-bottom: 20px;
 		}
 		p:nth-child(1) {
 			color: #555;
 			font-size: 0.8rem;
 			font-weight: 200;
-			margin-bottom: 20px;
+			margin-bottom: 15px;
 		}
 		p:nth-child(2) {
 			font-size: 1.5rem;
@@ -238,6 +261,9 @@ main > h2 {
 			background-color: #777;
 			color: black;
 			border: none;
+		}
+		button:hover {
+			cursor: pointer;
 		}
 	}
 }

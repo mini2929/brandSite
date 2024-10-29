@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react';
 import Layout from '../components/Layout';
+import SplitText from '../components/SplitText';
 
 export default function BrandStory() {
 	const memberData = [
@@ -9,17 +10,21 @@ export default function BrandStory() {
 		{ name: 'Perfume', text: 'Best Product', pic: '/p1.jpg' }
 	];
 
-	const slip = useRef(null);
+	const ceoTitleRef = useRef(null);
+	const ceoSubTitleRef = useRef(null);
+	const ceoImgRef = useRef(null);
 
 	useEffect(() => {
-		if (slip.current) {
-			slip.current.classList.remove('on');
-		}
+		// 초기화
+		if (ceoTitleRef.current) ceoTitleRef.current.classList.remove('on');
+		if (ceoSubTitleRef.current) ceoSubTitleRef.current.classList.remove('on');
+		if (ceoImgRef.current) ceoImgRef.current.classList.remove('on');
 
+		// 각 요소에 'on' 클래스 추가
 		setTimeout(() => {
-			if (slip.current) {
-				slip.current.classList.add('on');
-			}
+			if (ceoTitleRef.current) ceoTitleRef.current.classList.add('on');
+			if (ceoSubTitleRef.current) ceoSubTitleRef.current.classList.add('on');
+			if (ceoImgRef.current) ceoImgRef.current.classList.add('on');
 		}, 500);
 	}, []);
 
@@ -27,19 +32,19 @@ export default function BrandStory() {
 		<Layout title='BrandStory'>
 			<article className='ceoBox'>
 				<div className='story'>
-					<nav className='ceoTitle'>
+					<nav className='ceoTitle' ref={ceoTitleRef}>
 						향기의 권위자 Angelo의
 						<br /> 단독 Brand 론칭
 					</nav>
-					<nav className='ceoSubTitle'>
+					<nav className='ceoSubTitle' ref={ceoSubTitleRef}>
 						<p>남자의 향을 완성하다</p>
-						<p>since 1990</p>
+						<p>SINCE 1990</p>
 						<p>젊은날의 성공을 함께 전달하다</p>
-						<p>AVALLION의 Image</p>
+						<p>AVALLION의 IMAGE</p>
 					</nav>
 				</div>
 
-				<div className='ceoImg' ref={slip}>
+				<div className='ceoImg' ref={ceoImgRef}>
 					<img className='ceo' src={memberData[0].pic} alt={memberData[0].name} />
 				</div>
 			</article>
