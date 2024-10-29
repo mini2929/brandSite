@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react';
 import Layout from '../components/Layout';
 
 export default function BrandStory() {
@@ -7,6 +8,20 @@ export default function BrandStory() {
 		{ name: 'Paul', text: 'Model', pic: '/model.png' },
 		{ name: 'Perfume', text: 'Best Product', pic: '/p1.jpg' }
 	];
+
+	const slip = useRef(null);
+
+	useEffect(() => {
+		if (slip.current) {
+			slip.current.classList.remove('on');
+		}
+
+		setTimeout(() => {
+			if (slip.current) {
+				slip.current.classList.add('on');
+			}
+		}, 500);
+	}, []);
 
 	return (
 		<Layout title='BrandStory'>
@@ -24,7 +39,7 @@ export default function BrandStory() {
 					</nav>
 				</div>
 
-				<div className='ceoImg'>
+				<div className='ceoImg' ref={slip}>
 					<img className='ceo' src={memberData[0].pic} alt={memberData[0].name} />
 				</div>
 			</article>
